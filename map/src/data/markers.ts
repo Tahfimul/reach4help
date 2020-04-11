@@ -1,5 +1,5 @@
 import { Service } from './index';
-
+import * as orgs from "./mutual_aid.json";
 /**
  * Contact details capture various methods to contact an organization.
  */
@@ -1131,3 +1131,6 @@ export const MARKERS: MarkerInfo[] = [
     loc: LOCATIONS.UK.ALL,
   },
 ];
+for (let org of orgs) {
+  MARKERS.push(org as unknown as MarkerInfo);
+}
